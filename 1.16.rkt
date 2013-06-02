@@ -1,6 +1,8 @@
 #lang racket
 
-(define (half x) (x . / . 2))
+(require 
+ (only-in "jtilles/prelude.rkt" 
+          half))
 
 (define (fast-and-svelte-expt b n)
   ;; `b` for "base", and `n` for... "natural"? "number"? I dunno.

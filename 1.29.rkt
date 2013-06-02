@@ -32,7 +32,7 @@
   (local [(define h (/ (upper-bound . - . init)
                        num-pieces))
           (define (next a) (+ h a))
-          
+
           (define (term a)
             (define coefficient (cond [(or (= a 0) (= a upper-bound)) 1]
                                       [(odd? a) 4]
@@ -50,21 +50,21 @@
                        num-pieces))
 
           (define (term n)
-            (define coefficient (cond [(or (= n 0) (= n num-pieces)) 1]
-                                      [(odd? n) 4]
-                                      [(even? n) 2]))
-            (define a (+ lower-bound (* n h)))
-            (* coefficient (func a)))]
-    (* (/ h 3) 
+            (let ([coefficient (cond [(or (= n 0) (= n num-pieces)) 1]
+                                     [(odd? n) 4]
+                                     [(even? n) 2])]
+                  [a (+ lower-bound (* n h))])
+              (* coefficient (func a))))]
+    (* (/ h 3)
        (sum term #i0 add1 num-pieces))))
 
 
 
 (require rackunit)
 (require (only-in "jtilles/prelude.rkt" difference))
-(check < 
+(check <
        (difference 1/4 (integral-según-Simpson cube 0 1 100))
        (difference 1/4 (integral cube 0 1 0.01)))
-(check < 
+(check <
        (difference 1/4 (integral-según-Simpson cube 0 1 1000))
        (difference 1/4 (integral cube 0 1 0.001)))
