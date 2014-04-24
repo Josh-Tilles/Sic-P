@@ -24,9 +24,10 @@
                                   (col . <= . row)))])
                [result natural-number/c])])) ;; I believe the `result` identifier can be arbitrarily named.
 
+
 (require rackunit)
 
-(test-case "The ``edges''of the triangle are all ones."
+(test-case "The ``edges'' of the triangle are all ones."
            (check-equal? (pascal 0 0) 1)
            (check-equal? (pascal 3 3) 1)
            (check-equal? (pascal 4 0) 1))

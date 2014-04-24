@@ -25,7 +25,4 @@
 (check-eq? (expt 9 10) ;= 3486784401
            (fast-and-svelte-expt 9 10))
 
-;;; It would be cool to provide a contract on this function that guaranteed its execution pattern. Like, that it executes in O(log(n)) time, or constant space.
-
-                             
-;;; Note that (let foo ([x p] [y q]) (... (foo ...))) is equivalent to (let ([foo (λ (x y) (... (foo
+;;; @TODO It would be cool to provide a contract on this function that guaranteed its execution pattern. Like, that it executes in O(log(n)) time, or constant space.
