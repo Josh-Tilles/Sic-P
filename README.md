@@ -12,3 +12,9 @@ I expect to be using the following in my solutions:
 - Chibi-scheme (to demonstrate R7RS stuff)
 - probably Guile
 - Clojure
+
+
+@TODO
+Explain Racket-specific idioms (like `(let ([y 2]) (+ y 3))`)
+Explain R7RS procedures (like `zero?`)
+Explain nice/convenient things just not mentioned in the book (like "named-let" syntax)
