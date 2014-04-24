@@ -5,3 +5,10 @@ Scheme implementations (which is stuff you can't get from the book)
 and compare to other languages. Said another way: I'm not going to
 bother restricting myself to only using what the authors have taught
 at a given point.
+
+I expect to be using the following in my solutions:
+
+- Racket (née PLT Scheme)
+- Chibi-scheme (to demonstrate R7RS stuff)
+- probably Guile
+- Clojure
