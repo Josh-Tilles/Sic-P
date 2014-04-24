@@ -1,7 +1,9 @@
-#lang racket
+#lang racket/base
 
 (require (only-in "jtilles/prelude.rkt"
-                  half))
+                  half)
+         (only-in racket/math
+                  sqr))
 
 (define (fib n)
   (let iterate ([a 1] [b 0] [p 0] [q 1] [count n])

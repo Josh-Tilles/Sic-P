@@ -1,4 +1,4 @@
-#lang racket
+#lang racket/base
 
 #| first attempt; ultimately wrong
 (define (tri-num r c)
@@ -14,6 +14,7 @@
       (+ (pascal (sub1 r) c)
          (pascal (sub1 r) (sub1 c)))))
 
+(require racket/contract)
 (provide
  (contract-out
   [pascal (->i ([row natural-number/c]

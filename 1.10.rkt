@@ -1,4 +1,4 @@
-#lang racket
+#lang racket/base
 
 (define (ackermann x y)
   (cond [(zero? y) 0]

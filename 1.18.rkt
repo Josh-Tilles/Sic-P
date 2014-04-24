@@ -1,9 +1,10 @@
-#lang racket
+#lang racket/base
 
 (require
  (only-in "jtilles/prelude.rkt"
           double 
-          halve))
+          halve)
+ racket/local)
 
 (define (iterative-mult a b)
   (local [(define (step n a b) ;; N.B. `a` and `b` are _shadowed_. That is, this internal definition did not close over the outer `a` and `b`. Under other circumstances I might have chosen different names, but I wanted to remind you about this.

@@ -1,4 +1,6 @@
-#lang racket
+#lang racket/base
+(require (only-in racket/math
+                  sqr))
 
 (define (half x) (x . / . 2))
 
