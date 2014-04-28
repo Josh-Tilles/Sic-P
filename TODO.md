@@ -6,3 +6,4 @@
     - possibly redo it in some program to make it pretty
     - (also, answer question properly)
 - In exercise 1.15, elaborate on complexity of `sine` procedure.
+- Expand exercise 1.18 into a blog post (intuition about maintaining invariants).
