@@ -5,4 +5,4 @@
 - Scan exercise 1.14 (create a tree illustrating the computation of `(count-change 11)`)
     - possibly redo it in some program to make it pretty
     - (also, answer question properly)
-- In Exercise 1.15, elaborate on complexity of `sine` procedure.
+- In exercise 1.15, elaborate on complexity of `sine` procedure.
