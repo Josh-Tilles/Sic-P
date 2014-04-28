@@ -1,0 +1,7 @@
+- Illustrate exercise 1.9 (pertains to recursive vs. iterative processes)
+- Expand exercise 1.10
+    - (has to do with Ackermann function)
+    - Scribble
+- Scan exercise 1.14 (create a tree illustrating the computation of `(count-change 11)`)
+    - possibly redo it in some program to make it pretty
+    - (also, answer question properly)
