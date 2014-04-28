@@ -2,9 +2,8 @@
 
 (require
  (only-in "jtilles/prelude.rkt"
-          halve))
-
-(define double (λ (x) (arithmetic-shift x 1))) ;; just bein' weird. don't mind me.
+          halve
+          double))
 
 (define (mult a b)
   (cond [(zero? b) 0]
