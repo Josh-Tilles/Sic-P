@@ -1,4 +1,4 @@
-#lang racket
+#lang racket/base
 
 (define (cube x) (* x x x))
 
@@ -44,7 +44,7 @@
 
 
 
-;; `num-pieces` is even!
+(require racket/local)
 (define (integral-según-Simpson func lower-bound upper-bound num-pieces)
   (local [(define h (/ (upper-bound . - . lower-bound)
                        num-pieces))
@@ -57,7 +57,7 @@
               (* coefficient (func a))))]
     (* (/ h 3)
        (sum term #i0 add1 num-pieces))))
-
+;; CONTRACT: `num-pieces` is even
 
 
 (require rackunit)
