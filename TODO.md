@@ -1,3 +1,4 @@
+- Visualize exercise 1.6 by expanding and reducing a few rounds.
 - Illustrate exercise 1.9 (pertains to recursive vs. iterative processes)
 - Expand exercise 1.10
     - (has to do with Ackermann function)
