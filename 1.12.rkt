@@ -21,7 +21,7 @@
                 [column (row) ; meaning that the contract for `column` depends on `row`
                         (and/c natural-number/c
                                (λ (col)
-                                  (col . <= . row)))])
+                                 (col . <= . row)))])
                [result natural-number/c])])) ;; I believe the `result` identifier can be arbitrarily named.
 
 
