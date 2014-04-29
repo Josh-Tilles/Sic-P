@@ -26,6 +26,7 @@
   (define (add-dx x) (+ x dx))
   (* (sum f (+ a (/ dx 2.0)) add-dx b) dx))
 
+;;; Here's my first attempt at exercise 29:
 #|
 ;; `num-pieces` is even!
 (define (integral-según-Simpson func init upper-bound num-pieces)
@@ -41,7 +42,7 @@
     (sum term init next upper-bound)))
 |#
 
-
+;;; Oh, and by the way, "según" means "according to" in Spanish
 
 
 (require racket/local)
