@@ -1,15 +1,7 @@
 #lang racket/base
 
-(require (only-in racket/function const))
-
-(define (cont-frac n d k)
-  (define (step i)
-    (if (= i k)
-        0
-        (/ (n i)
-           (+ (d i)
-              (step (add1 i))))))
-  (step 0))
+(require (only-in racket/function const)
+         "1.37.rkt")
 
 (define (integral-quotient dividend divisor)
   (let ([r (remainder dividend divisor)])

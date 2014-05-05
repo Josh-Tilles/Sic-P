@@ -1,5 +1,7 @@
 #lang racket/base
 
+(provide cont-frac)
+
 (require
  (only-in "jtilles/prelude.rkt"
           difference)

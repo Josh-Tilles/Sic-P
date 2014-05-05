@@ -1,16 +1,8 @@
 #lang racket/base
 
 (require racket/local
-         (only-in racket/math sqr))
-
-(define (cont-frac n d k)
-  (define (step i)
-    (if (= i k)
-        0
-        (/ (n i)
-           (+ (d i)
-              (step (add1 i))))))
-  (step 0))
+         (only-in racket/math sqr)
+         "1.37.rkt")
 
 (define (tan-cf x k)
   (cont-frac (λ (i)
