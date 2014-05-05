@@ -9,3 +9,6 @@
 - In exercise 1.15, elaborate on complexity of `sine` procedure.
 - Expand exercise 1.18 into a blog post (intuition about maintaining invariants).
 - Exercises (from Chapter 1) 21–28
+- Write up solution to exercise 35 (showing that \phi is a fixed point of x -> 1 + 1/x)
+    - Use MathJax and/or Isabelle
+    - Show hitting the wall, then subsequent later insight (esp. "how do I get rid of the radical?")
