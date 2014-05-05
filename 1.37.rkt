@@ -11,12 +11,12 @@
 
 (define (cont-frac n d k)
   (define (step i)
-    (if (= i k)
+    (if (i . > . k)
         0
         (/ (n i)
            (+ (d i)
               (step (add1 i))))))
-  (step 0))
+  (step 1))
 
 (define (find-suitably-accurate-k)
   (local [(define acceptable-delta 1e-4) ; = within 4 decimal places

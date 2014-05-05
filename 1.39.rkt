@@ -6,11 +6,11 @@
 
 (define (tan-cf x k)
   (cont-frac (λ (i)
-               (if (zero? i)
+               (if (= 1 i) ; vs `(= i 1)`? Stylistically, is there a reason to prefer one over the other?
                    x
                    (- (sqr x))))
              (λ (i)
-               (sub1 (* 2 (add1 i)))) ; odd numbers
+               (sub1 (* 2 i))) ; odd numbers
              k))
 
 (tan 1.5)
