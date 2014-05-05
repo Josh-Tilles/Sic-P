@@ -6,7 +6,7 @@
 
 (define (tan-cf x k)
   (cont-frac (λ (i)
-               (if (zero? i) ; vs `(= i 1)`? Stylistically, is there a reason to prefer one over the other?
+               (if (zero? i)
                    x
                    (- (sqr x))))
              (λ (i)
