@@ -60,3 +60,4 @@ Attempting to use: 4.5555605631716585
 Attempting to use: 4.555539937549421
 4.555532914039455
 ```
+- Test solution(s) to exercise 1.40.
