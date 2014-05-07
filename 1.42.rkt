@@ -1,6 +1,7 @@
 #lang racket/base
 (require rackunit
          (only-in racket/math sqr))
+(provide compose)
 
 (define (compose f g)
   (λ (x)
