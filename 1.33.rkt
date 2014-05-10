@@ -26,6 +26,16 @@
                                     null-value)))))]
     (iter a null-value)))
 
+(define (filtered-accumulate2 combiner filter null-value term a next b)
+  (let iter ([i a] [result null-value])
+    (if (i . > . b)
+        result
+        (let ([val (if (filter (term i))
+                       (term i)
+                       null-value)])
+          (iter (next i)
+                (combiner result val))))))
+
 (define (sum-of-squares-of-primes a b)
   (filtered-accumulate + prime? 0 sqr a add1 b))
 

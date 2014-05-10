@@ -2,7 +2,7 @@
 
 (require
  (only-in "jtilles/prelude.rkt"
-          halve
+          halve ;; N.B. the book specifies that `halve` only operates on even numbers. I did not implement this constraint.
           double))
 
 (define (mult a b)

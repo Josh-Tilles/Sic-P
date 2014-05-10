@@ -12,6 +12,7 @@
 ;; (ackermann 0 2) = 4
 ;; (ackermann 0 4) = 8
 ;; (ackermann 0 n) = (* 2 n)
+; (given by second condition)
 
 ;; (ackermann 1 0) = 0
 ;; (ackermann 1 1) = 2
@@ -44,6 +45,8 @@
 ;;                     WRONG
 ;;                 (ackermann 2 3) != 2^(2^3)
 ;; correct: 2^2^2^... a tower of twos with a height of n. AKA 2 ↑↑ n
+
+;; (ackermann 2 5) = (expt 2 (expt 2 (expt 2 (expt 2 2))))
 
 ;; (ackermann 3 0) = 0
 ;; (ackermann 3 1) = 2

@@ -1,0 +1,1 @@
+("6.0" ("b686479b87c16a3d15f5ef70349cb6c6d6b38974" . "326f807860d2e19f15d6711338713dbbc8b042c7") (collects #"racket" #"local.rkt") #"/Users/joshua.tilles/Projects/SICP/jtilles/prelude.rkt" (collects #"racket" #"function.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"base.rkt"))

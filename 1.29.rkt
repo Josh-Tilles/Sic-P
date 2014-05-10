@@ -44,6 +44,12 @@
 
 ;;; Oh, and by the way, "según" means "according to" in Spanish
 
+;;; ```clojure
+;;; (concat 1
+;;;         (take (- num-pieces 2)
+;;;               (cycle [4 2]))
+;;;         1)
+;;; ```
 
 (require racket/local)
 (define (integral-según-Simpson func lower-bound upper-bound num-pieces)
@@ -61,8 +67,9 @@
 ;; CONTRACT: `num-pieces` is even
 
 
-(require rackunit)
-(require (only-in "jtilles/prelude.rkt" difference))
+(require rackunit
+         (only-in "jtilles/prelude.rkt"
+                  difference))
 (check <
        (difference 1/4 (integral-según-Simpson cube 0 1 100))
        (difference 1/4 (integral cube 0 1 0.01)))

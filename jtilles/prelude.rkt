@@ -22,7 +22,7 @@
   (abs (- x y)))
 (define-alias diff difference)
 
-(define diff-alt (compose abs -)) ;; an alternative implementation; written in point-free style
+(define diff-alt (compose1 abs -)) ;; an alternative implementation; written in point-free style
 
 
 (define (average x y)

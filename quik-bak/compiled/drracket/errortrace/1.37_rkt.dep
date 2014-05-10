@@ -1,0 +1,1 @@
+("6.0" ("092c7448943c8b33c0b6c180b845c17a30bd187a" . "4af246c0a573a5c647ed95078698fb736bbdecc4") (collects #"racket" #"main.rkt") (collects #"racket" #"runtime-config.rkt") #"/Users/joshua.tilles/Projects/SICP/quik-bak/../jtilles/prelude.rkt")
