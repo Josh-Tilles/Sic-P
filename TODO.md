@@ -64,3 +64,4 @@ Attempting to use: 4.555539937549421
 ```
 - Test solution(s) to exercise 1.40.
 - Test solution(s) to exercise 1.44.
+- Test solution(s) to exercise 2.1. (rational number normalization)
