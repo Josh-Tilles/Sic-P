@@ -3,7 +3,8 @@
 (provide define-alias
          half halve half-of
          difference diff diff-alt
-         average double)
+         average double
+         reciprocal)
 
 ;;; Now we can have the simple syntax of "(define make-rat cons)"
 ;;; without losing the debugging & tracing conveniences.
@@ -31,3 +32,6 @@
 
 (define (double x)
   (arithmetic-shift x 1))
+
+(define (reciprocal n)
+  (1 . / . n))
