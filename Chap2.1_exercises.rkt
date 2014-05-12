@@ -1,48 +1,7 @@
 #lang racket
 
-(define (half n)
-  (n . / . 2))
-
-(define (difference x y)
-  (abs (- x y)))
-
-;;; Now we can have the simple syntax of "(define make-rat cons)"
-;;; without losing the debugging & tracing conveniences.
-(define-syntax-rule (alias new-name old-name)
-  (define (new-name . args)
-    (apply old-name args)))
-
-(alias make-rational cons)
-(alias numer car)
-(alias denom cdr)
-
-(alias diff difference)
-(define diff-alt (compose abs -))
-
-
-;;; If the rational number is positive, both the numerator and denominator
-;;;  are positive.
-;;; If the rational is negative, only the numerator is negative.
-(define (make-rat++ n d)
-  ;; There are four possible combinations: +n +d, +n -d, -n +d, -n -d.
-  ;; The first and third require no changes.
-  ;; The second and fourth are both acceptable after each of the
-  ;;  components have been multiplied by negative one.
-  (let ([common-d (gcd n d)])
-    (if (negative? d)
-        (cons ((- n) . / . common-d)
-              ((- d) . / . common-d))
-        (cons (n . / . common-d)
-              (d . / . common-d)))))
-;;; I'd rather have done something like Clojure's (let [[x y] (if (neg? d) [(- x) (- y)] [x y]) ...)
-;;; Also interesting: in Clojure this probably would have been a map/dict because you
-;;; get free :numer and :denom functions.
-
-
-
-
-
-
+(require (only-in "jtilles/prelude.rkt"
+                  half halve diff))
 
 ;;; Each line segment in a plane is represented as a pair of points: a starting point and an ending point.
 
@@ -149,12 +108,12 @@
 ;; (numeric-car 171) SHOULD equal 4
 (define (divides? d n)
   (zero? (remainder n d)))
+;; (define (divisible-by? n d) ...
 (define (extract-all n)
   (λ (x)
     (let iter ([x x])
       (if (n . divides? . x)
-          (iter (/ x
-                   n))
+          (iter (x . / . n))
           x))))
 
 (define extract-all-twos (extract-all 2))
@@ -170,7 +129,7 @@
                                          (/ c 3))]
           [(= c 1) a])))
 
-(define (numeric-cdr the-cons)
-  (
+;(define (numeric-cdr the-cons)
+;  (
   
   
